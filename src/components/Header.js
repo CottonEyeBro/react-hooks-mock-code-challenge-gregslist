@@ -1,8 +1,10 @@
 import React from "react";
 import Search from "./Search";
 
-function Header() {
+function Header( {searchListing, setSearchListing, setFormData} ) {
+
   return (
+
     <header>
       <h1>
         <span className="logo" role="img">
@@ -10,7 +12,7 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search searchListing={searchListing} setSearchListing={setSearchListing} setFormData={setFormData} />
     </header>
   );
 }
